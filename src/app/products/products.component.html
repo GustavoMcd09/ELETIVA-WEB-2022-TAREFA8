@@ -1,0 +1,18 @@
+<h2>Produtos Cadastrados</h2>
+<ul class="products">
+  <li *ngFor="let product of products">
+    <button type="button" (click)="onSelect(product)">
+      <span class="badge">{{product.id}}</span>
+      <span class="name">{{product.name}}</span>
+    </button>
+  </li>
+</ul>
+
+<div *ngIf="selectedProduct">
+    <h2>Detalhes do produto: {{selectedProduct.name}}</h2>
+    <div>id: {{selectedProduct.id}}</div>
+    <div>
+      <label for="product-name">Editar nome produto: </label>
+      <input id="product-name" [(ngModel)]="selectedProduct.name" placeholder="name">
+    </div>
+  </div>
