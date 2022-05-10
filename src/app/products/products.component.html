@@ -1,4 +1,5 @@
-<h2>Produtos Cadastrados</h2>
+<h2 class="align2">GSM Piscinas</h2>
+<h2 class="align">Cadastro de Produtos</h2>
 <ul class="products">
   <li *ngFor="let product of products">
     <button type="button" (click)="onSelect(product)">
@@ -7,12 +8,22 @@
     </button>
   </li>
 </ul>
-
-<div *ngIf="selectedProduct">
-    <h2>Detalhes do produto: {{selectedProduct.name}}</h2>
-    <div>id: {{selectedProduct.id}}</div>
+<div class="box1">
+  <div *ngIf="selectedProduct">
+    <h2 class="space"> Detalhes do produto: {{selectedProduct.name}}</h2>
+    <div class="space"> id: {{selectedProduct.id}}</div>
     <div>
-      <label for="product-name">Editar nome produto: </label>
-      <input id="product-name" [(ngModel)]="selectedProduct.name" placeholder="name">
+      <label for="product-name" class="space">Editar nome produto: </label>
+      <input class="styleInput" id="product-name" [(ngModel)]="selectedProduct.name" placeholder="name">
     </div>
-  </div>
+     <div>
+    <label class="space">Editar quantidade em estoque: </label>
+    <input class="styleInput" id="products2-qtd" [(ngModel)]="products2.qtd" placeholder="Quantidade">
+    </div>
+    <div>
+    <label class="space">Editar código do produto: </label>
+    <input class="styleInput" id="products2-cod" [(ngModel)]="products2.cod" placeholder="Código">
+    </div>
+</div>
+</div>
+ 
